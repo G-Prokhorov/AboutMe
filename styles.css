@@ -78,7 +78,7 @@ body {
 .myImg > img, video {
     position: absolute;
     width: 85%;
-    top: -10%;
+    animation: moveBlock 1s linear forwards;
     filter: drop-shadow(0px 0px 15px rgba(246, 157, 199, 0.15));
 }
 
@@ -161,6 +161,16 @@ li {
     color: #fff;
 }
 
+@keyframes moveBlock {
+    0% {
+        top: -11.5%;
+    }
+    100% {
+        top: -10%;
+    }
+}
+
+
 
 
 @media screen and (max-width: 1599px) {
@@ -169,10 +179,14 @@ li {
         height: 90%;
     }
 
-    .myImg > img, video {
-        top: -5%;
+    @keyframes moveBlock {
+        0% {
+            top: -7%;
+        }
+        100% {
+            top: -5%;
+        }
     }
-
 }
 
 @media screen and (max-width: 1250px) {
@@ -192,7 +206,15 @@ li {
         width: 34vw;
         max-width: 380px;
         left: 5%;
-        top: -3%;
+    }
+
+    @keyframes moveBlock {
+        0% {
+            top: -5%;
+        }
+        100% {
+            top: -3%;
+        }
     }
 
     .lineHeight > p {
@@ -205,6 +227,15 @@ li {
         width: 40vw;
         max-width: 450px;
         top: 20px;
+    }
+
+    @keyframes moveBlock {
+        0% {
+            top: 10px;
+        }
+        100% {
+            top: 20px;
+        }
     }
 
     main > h1 {
@@ -306,7 +337,7 @@ li {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 400px) {
     .navigation > div  { 
         width: 100%;
     }
