@@ -236,15 +236,78 @@ li {
     .navigation {
         grid-area: 1 / 1 / 2 / 2;
     }
+
+    .navigation a {
+        color: #fff;
+        font-size: 22px;
+    }
     
     .navigation > div  { 
         transform: none;
-        position: static;
-        width: 80%;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        padding-top: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 80px;
         display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
+        flex-direction: column;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    
+    .now {
+        margin-top: 20px;
+        order: -1;
+    }
+
+    .backList {
+        animation: showBack 0.5s linear forwards;
+    }
+
+    .backListHide {
+        animation: hideBack 0.5s linear forwards;
+    }
+
+    @keyframes hideBack {
+        0% {
+           height: 300px;
+        }
+        100% {
+            height: 80px;
+        }
+        
+    }
+
+    @keyframes showBack {
+        0% {
+           height: 80px;
+        }
+        100% {
+            height: 300px;
+        }
+        
+    }
+
+    .list {
+        display: none;
+    }
+
+    .showList {
+        display: block;
+        margin-top: 24px !important;
+        animation: showAnime 0.5s linear forwards;
+    }
+
+    @keyframes showAnime {
+        0% {
+            opacity: 0;
+        } 
+        100% {
+            opacity: 1;
+        }
+        
     }
 
     .myImg {
@@ -266,8 +329,7 @@ li {
 
 
     .socialNet {
-        grid-area: 4 / 1 / 5 / 2;
-        
+        grid-area: 4 / 1 / 5 / 2;   
     }
     
     main {
