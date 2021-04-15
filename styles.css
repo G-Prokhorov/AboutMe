@@ -244,7 +244,7 @@ li {
     .navigation > div  { 
         transform: none;
         position: static;
-        width: 100%;
+        width: 80%;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -299,5 +299,15 @@ li {
     .twoButton {
         bottom: 100px;
         right: 0;
+    }
+
+    #works {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .navigation > div  { 
+        width: 100%;
     }
 }
