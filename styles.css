@@ -109,7 +109,7 @@ main > hr {
     width: 60%;
 }
 
-h1 {
+h1, h2 {
     color: #f69dc7;
     font-size: 36px;
     line-height: 56px;
@@ -203,7 +203,7 @@ li {
         top: 20px;
     }
 
-    main > h1 {
+    main > h1, h2 {
         font-size: 24px;
     }
 
@@ -345,7 +345,7 @@ li {
         font-size: 20px;
     }
 
-    main > h1 {
+    main > h1, h2 {
         font-size: 26px;
         line-height: 130%;
     }
